@@ -1,0 +1,42 @@
+body {
+  background: url(mynd/Andrea.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  /*property to be compatible with the rest of browsers*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
+}
+
+header {
+  padding-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  color: #ece8e8;
+  background: rgba(0, 0, 0, 0.25); /*apply transparency whit rgba*/
+}
+
+h1 {
+  font-family: serif;
+  font-size: 90px;
+  color: #e2d2d2;
+}
+
+p {
+  padding-top: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.notice {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  color: #ece8e8;
+  background: rgba(0, 0, 0, 0.3); /*apply transparency whit rgba*/
+}
