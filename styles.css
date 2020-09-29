@@ -1,8 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   background: url(mynd/Andrea.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  min-height: 100%;
 
   /*property to be compatible with the rest of browsers*/
   -webkit-background-size: cover;
@@ -11,32 +24,67 @@ body {
 }
 
 header {
+  grid-area: header;
+  font-family: "Cinzel Decorative", cursive;
   padding-top: 30px;
   font-size: 40px;
   text-align: center;
   color: #ece8e8;
-  background: rgba(0, 0, 0, 0.25); /*apply transparency whit rgba*/
+  background: rgba(0, 0, 0, 0.25);
+  /*apply transparency whit rgba*/
 }
 
-h1 {
-  font-family: serif;
-  font-size: 90px;
-  color: #e2d2d2;
-}
-
-p {
-  padding-top: 30px;
+.sidebar {
+  grid-area: sidebar;
+  text-align: center;
+  font-family: "Cinzel Decorative";
   font-size: 30px;
+  color: #e2d2d2;
+  margin-top: 400px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  grid-area: navbar;
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+  color: #e2d2d2;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.main {
+  grid-area: main;
+  font-size: 13px;
+  font-family: cursive;
+  color: #ece8e8;
+  width: 100%;
   text-align: center;
 }
 
-.notice {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  color: #ece8e8;
-  background: rgba(0, 0, 0, 0.3); /*apply transparency whit rgba*/
+.grid-container > * {
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template: "header" "sidebar" auto "navbar" "main" auto;
+}
+
+@media (min-width: 1000px) {
+  .grid-container {
+    grid-template: "header header" 100px "navbar navbar" 50px "main main" "sidebar sidebar" auto;
+  }
+
+  .sidebar {
+    font-size: 50px;
+    margin-top: 300px;
+    margin-left: 65%;
+  }
+
+  .main {
+    font-size: 20px;
+    text-align: center;
+  }
 }
