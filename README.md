@@ -1,6 +1,6 @@
 # ResponsivePoster
 
-##Recreation Poster design: Andrea Bocelli in simple / HTML.
+Recreation Poster design: Andrea Bocelli in simple / HTML.
 
 LIVE DEMO HERE: http://PostAndreaBocelli.surge.sh
 
